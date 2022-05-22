@@ -12,4 +12,7 @@ model Book {
   title    String
   author   String
   bar_code String @unique
+
+  // esse comando serve apenas para dizer qual o nome da model que voce quer que seja criada
+  @@map("books")
 }
