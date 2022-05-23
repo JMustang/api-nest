@@ -58,5 +58,10 @@ export class BookService {
     if (!bookExists) {
       throw new Error('Book does not exists!');
     }
+    return await this.prisma.book.delete({
+      where: {
+        id,
+      },
+    });
   }
 }
